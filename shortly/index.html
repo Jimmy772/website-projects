@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Shortly</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link
+        rel="shortcut icon"
+        type="image/png"
+        href="images/favicon-32x32.png"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Alata&family=Poppins:wght@400;500;700&display=swap"
+        rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <!-- NAVBAR SECTION -->
+        <nav>
+            <!-- container -->
+            <div class="primary-container pt-8 flex items-end justify-between font-bold">
+                <!-- logo & Menu container -->
+                <div class="flex gap-x-16 items-center">
+                    <!-- Logo -->
+                    <img src="images/logo.svg" alt="">
+                    <!-- menu items -->
+                    <ul class="hidden lg:flex gap-x-6 text-grayishViolet">
+                        <li class="hover:text-veryDarkViolet">Features</li>
+                        <li class="hover:text-veryDarkViolet">Pricing</li>
+                        <li class="hover:text-veryDarkViolet">Resources</li>
+                    </ul>
+                </div>
+
+                <!-- login and sign up container -->
+                <div class="hidden lg:flex items-center gap-x-6">
+                    <a class="text-grayishViolet hover:text-veryDarkViolet"
+                    href="#">Login</a>
+                    <a class="btn-primary"
+                    href="#">Sign Up</a>
+                </div>
+
+                <!-- TODO: Hambarger ICON -->
+                <div class="lg:hidden scale-75">
+                    <div id="nav-icon" class="item-head" data-list="mobile-menu">
+                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- TODO: Mobile MENU -->
+            <div class="primary-container">
+                <div class="nav-wrapper lg:hidden" id="mobile-menu">
+                    <!-- all items -->
+                    <ul class="bg-cyanLight max-w-xs w-full p-8 rounded-lg absolute right-5 text-right text-veryDarkViolet space-y-2 overflow-hidden">
+                        <li class="hover:text-veryDarkViolet">Features</li>
+                        <li class="hover:text-veryDarkViolet">Pricing</li>
+                        <li class="hover:text-veryDarkViolet">Resources</li>
+                        <li>
+                            <a class="btn-secondary bg-veryDarkBlue block"
+                            href="#">Login</a>
+                        </li>
+                        <li>
+                            <a class="btn-secondary block"
+                            href="#">Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- HERO SECTION -->
+        <section class="pb-16"
+         id="hero">
+            <!-- flex container -->
+            <div class="primary-container mt-16 flex flex-col lg:flex-row gap-y-20 items-center lg:items-end gap-x-10 justify-between">
+                <img class="lg:order-2 max-w-xl w-full lg:w-auto"
+                src="images/illustration-working.svg" alt="" >
+                <!-- CONTENT -->
+                <div class="text-center lg:text-left max-w-3xl lg:max-w-md">
+                    <h1 class="font-bold text-veryDarkViolet text-5xl lg:text-6xl mb-8">More than just shorter links</h1>
+                    <p class="text-grayishViolet font-medium text-lg mb-4">
+                        Build your brand's recognition and get detailed insights on how your links are performing
+                    </p>
+                    <a href="" class="btn-primary">Get Started</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SHORTEN FORM & LINKS -->
+        <section class="bg-slate-100 py-16" id="links">
+            <!-- flex container -->
+            <div class="secondary-container flex flex-col gap-y-5">
+                <!-- FORM  -->
+                <form 
+                id="link-form" 
+                class="relative bg-veryDarkBlue rounded-lg px-10 py-10 flex flex-col md:flex-row gap-y-3 gap-x-3">
+                    <!-- input -->
+                    <input 
+                    id="link-input" 
+                    class="flex-grow px-3 py-4 rounded-lg border-2 placeholder:text-red focus:outline-none" 
+                    type="text" 
+                    placeholder="shorten a link here">
+                    <!-- button -->
+                    <button 
+                    class="btn-secondary py-4">
+                    Shorten It!</button>
+                    <!-- ERROR message -->
+                    <div 
+                    id="err-msg" 
+                    class="absolute left-9 bottom-3 text-red text-sm italic"></div>
+                </form>
+
+                <!-- result 1 -->
+                <div class="bg-white rounded-lg px-10 py-10 flex flex-col md:flex-row gap-y-3 justify-between items-center">
+                    <!-- original link -->
+                    <a class="text-center whitespace-nowrap text-ellipsis overflow-hidden max-w-full"
+                     href="#">
+                        https://www.frontendmentor.io
+                    </a>
+                    <!-- shortened links -->
+                    <div class="flex flex-col gap-x-3 gap-y-3 md:flex-row items-center mx-auto md:mx-0 shrink-0">
+                        <a class="text-cyan font-semibold "
+                        href="#">
+                            https://rel.ink/k41KyK
+                        </a>
+                        <a href="#" class="btn-secondary w-fit">Copy</a>
+                    </div>
+                </div>
+
+                <!-- result 2 -->
+                <div class="bg-white rounded-lg px-10 py-10 flex flex-col md:flex-row gap-y-3 justify-between items-center">
+                    <!-- original link -->
+                    <a class="text-center whitespace-nowrap text-ellipsis overflow-hidden max-w-full"
+                     href="#">
+                        https://twitter.com/frontendmentor
+                    </a>
+                    <!-- shortened links -->
+                    <div class="flex flex-col gap-x-3 gap-y-3 md:flex-row items-center mx-auto md:mx-0 shrink-0">
+                        <a class="text-cyan font-semibold"
+                        href="#">
+                            https://rel.ink/k41KyK
+                        </a>
+                        <a href="#" class="btn-secondary bg-veryDarkBlue w-fit">Copy</a>
+                    </div>
+                </div>
+
+                <!-- result 3 -->
+                <div class="bg-white rounded-lg px-10 py-10 flex flex-col md:flex-row gap-y-3 justify-between items-center">
+                    <!-- original link -->
+                    <a class="text-center whitespace-nowrap text-ellipsis overflow-hidden max-w-full"
+                     href="#">
+                        https://www.linkedin.com/company/frontend-mentor
+                    </a>
+                    <!-- shortened links -->
+                    <div class="flex flex-col gap-x-3 gap-y-3 md:flex-row items-center mx-auto md:mx-0 shrink-0">
+                        <a class="text-cyan font-semibold"
+                        href="#">
+                            https://rel.ink/k41KyK
+                        </a>
+                        <a href="#" class="btn-secondary w-fit">Copy</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Features SECTION -->
+        <section class="bg-slate-100 py-16"
+         id="features">
+            <!-- main container -->
+            <div class="secondary-container">
+                <!-- stats -->
+                <div class="mx-auto max-w-md text-center space-y-5">
+                    <h2 class="text-veryDarkViolet text-3xl font-semibold">Advanced Statistics</h2>
+                    <p class="text-grayishViolet font-medium mb-4">
+                        Track how your links are performing across the web with our advanced statistics dashboard
+                    </p>
+                </div>
+                <!-- features list -->
+                <div class="flex flex-col lg:flex-row mt-32 items-center">
+                    <!-- feature 1 -->
+                    <div class="relative lg:text-left text-center pt-20 pb-7 pl-7 pr-10 bg-white lg:w-72 rounded-md space-y-6 max-w-md">
+                        <h4 class="text-veryDarkViolet text-lg font-semibold">Brand Recognition</h4>
+                        <p class="text-grayishViolet font-medium">
+                            Boost your brand recognition with each click. Generate links don't mean a thing. Branded links help instil confidence in your content.
+                        </p>
+                        <!-- positioning container -->
+                        <div class="absolute -top-16 left-0 w-full">
+                            <div class="bg-veryDarkBlue w-fit rounded-full p-5 mx-auto lg:ml-7">
+                                <img
+                                src="images/icon-brand-recognition.svg"
+                                alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="w-4 bg-cyan h-24 border lg:w-16 lg:h-4">
+                    <!-- feature 2 -->
+                    <div class="relative lg:text-left text-center pt-20 pb-7 pl-7 pr-10 bg-white lg:w-72 lg:mt-10 rounded-md space-y-6 max-w-md">
+                        <h4 class="text-veryDarkViolet text-lg font-semibold">Detailed Records</h4>
+                        <p class="text-grayishViolet font-medium">
+                            Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.
+                        </p>
+                        <!-- positioning container -->
+                        <div class="absolute -top-16 left-0 w-full">
+                            <div class="bg-veryDarkBlue w-fit rounded-full p-5 mx-auto lg:ml-7">
+                                <img
+                                src="images/icon-detailed-records.svg"
+                                alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="w-4 bg-cyan h-24 border lg:w-16 lg:h-4">
+                    <!-- feature 3 -->
+                    <div class="relative lg:text-left text-center pt-20 pb-7 pl-7 pr-10 bg-white lg:w-72 lg:mt-20 rounded-md space-y-6 max-w-md">
+                        <h4 class="text-veryDarkViolet text-lg font-semibold">Fully Customizable</h4>
+                        <p class="text-grayishViolet font-medium">
+                            Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.
+                        </p>
+                        <!-- positioning container -->
+                        <div class="absolute -top-16 left-0 w-full">
+                            <div class="bg-veryDarkBlue w-fit rounded-full p-5 mx-auto lg:ml-7">
+                                <img
+                                src="images/icon-fully-customizable.svg"
+                                alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION SECTION -->
+        <section class="bg-slate-100"
+        id="cta">
+            <!-- background -->
+            <div class="bg-darkViolet">
+                <div class="w-full bg-cover bg-no-repeat lg:bg-[url('../images/bg-boost-desktop.svg')] bg-[url('../images/bg-boost-mobile.svg')] lg:py-28 py-44">
+                    <div class="text-center mx-auto space-y-6 secondary-container">
+                        <h3 class="text-white font-bold text-3xl">Boost your links today</h3>
+                        <button class="btn-primary">Get started</button>
+                    </div>
+                </div>
+                <!-- <img class="w-full" src="images/bg-boost-desktop.svg" alt=""> -->
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="bg-veryDarkViolet">
+            <!-- container -->
+            <div class="primary-container pt-24 pb-6">
+                <div class="flex flex-col gap-y-4 lg:flex-row lg:justify-between lg:items-start">
+                    <!-- logo -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="121" height="33" class="mb-4 lg:mb-0">
+                        <path fill="white" d="M16.715 7.932c-.068-.09-.306-.26-.714-.51s-.918-.51-1.53-.782-1.281-.51-2.006-.714a8.005 8.005 0 00-2.176-.306c-1.995 0-2.992.669-2.992 2.006 0 .408.107.748.323 1.02.215.272.532.516.952.731.419.215.946.414 1.58.595l1.406.393.805.219c1.156.317 2.198.663 3.128 1.037.929.374 1.717.839 2.363 1.394a5.647 5.647 0 011.496 2.023c.35.793.527 1.745.527 2.856 0 1.36-.255 2.51-.765 3.451-.51.94-1.185 1.7-2.023 2.278-.84.578-1.802.997-2.89 1.258-1.088.26-2.21.391-3.366.391a19.68 19.68 0 01-5.44-.799c-.884-.26-1.74-.572-2.567-.935A14.358 14.358 0 01.53 22.28l2.448-4.862c.09.113.385.329.884.646.498.317 1.116.635 1.853.952.736.317 1.558.6 2.465.85.906.25 1.824.374 2.754.374 1.972 0 2.958-.6 2.958-1.802 0-.453-.148-.827-.442-1.122-.295-.295-.703-.561-1.224-.799a12.455 12.455 0 00-1.504-.56l-1.702-.495-.976-.288c-1.111-.34-2.074-.708-2.89-1.105-.816-.397-1.49-.856-2.023-1.377a5.003 5.003 0 01-1.19-1.802c-.261-.68-.391-1.473-.391-2.38 0-1.27.238-2.391.714-3.366a7.266 7.266 0 011.938-2.465 8.435 8.435 0 012.839-1.513c1.076-.34 2.215-.51 3.417-.51.838 0 1.666.08 2.482.238.816.159 1.598.363 2.346.612.748.25 1.445.533 2.09.85.647.317 1.242.635 1.786.952l-2.448 4.624zM40.139 25h-5.44V14.97c0-1.156-.227-2.006-.68-2.55-.454-.544-1.077-.816-1.87-.816-.318 0-.663.074-1.037.221a4.173 4.173 0 00-1.088.646 5.827 5.827 0 00-.97 1.003 4.4 4.4 0 00-.68 1.292V25h-5.44V.18h5.44v9.962a6.786 6.786 0 012.602-2.465c1.076-.578 2.26-.867 3.553-.867 1.201 0 2.17.21 2.907.629.736.42 1.303.952 1.7 1.598.396.646.663 1.371.799 2.176.136.805.204 1.592.204 2.363V25zm12.34.34c-1.519 0-2.873-.25-4.063-.748-1.19-.499-2.193-1.173-3.01-2.023a8.54 8.54 0 01-1.852-2.958 9.97 9.97 0 01-.63-3.519c0-1.224.21-2.397.63-3.519a8.54 8.54 0 011.853-2.958c.816-.85 1.819-1.53 3.009-2.04s2.544-.765 4.063-.765c1.519 0 2.867.255 4.046.765 1.179.51 2.176 1.19 2.992 2.04a8.754 8.754 0 011.87 2.958 9.736 9.736 0 01.646 3.519 9.97 9.97 0 01-.63 3.519 8.54 8.54 0 01-1.852 2.958c-.816.85-1.82 1.524-3.01 2.023-1.19.499-2.543.748-4.062.748zM48.5 16.092c0 1.405.374 2.533 1.122 3.383.748.85 1.7 1.275 2.856 1.275a3.59 3.59 0 001.564-.34c.476-.227.89-.544 1.24-.952a4.57 4.57 0 00.834-1.479 5.632 5.632 0 00.306-1.887c0-1.405-.374-2.533-1.122-3.383-.748-.85-1.689-1.275-2.822-1.275a3.702 3.702 0 00-2.84 1.292 4.57 4.57 0 00-.832 1.479 5.632 5.632 0 00-.306 1.887zm27.776-4.284c-1.315.023-2.505.238-3.57.646-1.065.408-1.836 1.02-2.312 1.836V25h-5.44V7.15h4.998v3.604c.612-1.201 1.4-2.142 2.363-2.822.963-.68 1.989-1.031 3.077-1.054h.544c.113 0 .227.011.34.034v4.896zm14.074 12.24a21.71 21.71 0 01-2.567.884c-.963.272-1.932.408-2.907.408-.68 0-1.32-.085-1.92-.255a4.286 4.286 0 01-1.582-.816c-.453-.374-.81-.867-1.07-1.479-.262-.612-.392-1.349-.392-2.21v-9.316h-2.278V7.15h2.278V1.472h5.44V7.15h3.638v4.114h-3.638v7.446c0 .59.147 1.014.442 1.275.295.26.669.391 1.122.391.408 0 .827-.068 1.258-.204.43-.136.805-.283 1.122-.442l1.054 4.318zM92.627.18h5.44v18.462c0 1.36.578 2.04 1.734 2.04.272 0 .572-.04.901-.119.329-.08.63-.198.901-.357l.714 4.08c-.68.317-1.462.567-2.346.748-.884.181-1.711.272-2.482.272-1.564 0-2.765-.408-3.604-1.224-.839-.816-1.258-1.995-1.258-3.536V.18zm11.456 27.506c.454.159.879.272 1.275.34a6.4 6.4 0 001.071.102c.658 0 1.168-.227 1.53-.68.363-.453.692-1.27.986-2.448l-6.8-17.85h5.61l4.148 13.192 3.57-13.192h5.1l-6.8 20.74a7.106 7.106 0 01-2.55 3.587c-1.224.918-2.674 1.377-4.352 1.377a8.17 8.17 0 01-1.377-.119 7.516 7.516 0 01-1.41-.391v-4.658z"/>
+                    </svg>
+                    <!-- features -->
+                    <div id="footer-items"
+                        class="flex flex-col gap-y-3 lg:flex-row lg:flex-grow lg:justify-around lg:max-w-2xl">
+                        <div class="space-y-4">
+                          <h5 class="text-white cursor-pointer hover:text-indigo-300 transition duration-200 item-head" data-list="features-list">Features</h5>
+                          <div class="wrapper lg:grid-rows-1" id="features-list">
+                              <ul class="text-grayishViolet space-y-2 overflow-hidden">
+                                <li>Link Shortening</li>
+                                <li>Branded Links</li>
+                                <li>Analytics</li>
+                              </ul>
+                          </div>
+                        </div>
+                      
+                        <div class="space-y-4">
+                          <h5 class="text-white cursor-pointer hover:text-indigo-300 transition duration-200 item-head" data-list="resources-list">Resources</h5>
+                          <div class="wrapper lg:grid-rows-1" id="resources-list">
+                              <ul class="text-grayishViolet space-y-2 overflow-hidden">
+                                <li>Blog</li>
+                                <li>Developers</li>
+                                <li>Support</li>
+                              </ul>
+                          </div>
+                        </div>
+                      
+                        <div class="space-y-4">
+                          <h5 class="text-white cursor-pointer hover:text-indigo-300 transition duration-200 item-head" data-list="company-list">Company</h5>
+                          <div class="wrapper lg:grid-rows-1" id="company-list">
+                              <ul class="text-grayishViolet space-y-2 overflow-hidden">
+                                <li>About</li>
+                                <li>Our Team</li>
+                                <li>Careers</li>
+                                <li>Contact</li>
+                              </ul>
+                          </div>
+                        </div>
+                    </div>
+                    <!-- socials -->
+                    <ul class="flex space-x-6 items-center">
+                        <a class="hover:scale-110 hover:-translate-y-1 transition duration-400"
+                        href="#"><img src="images/icon-facebook.svg" alt=""></a>
+                        <a class="hover:scale-110 hover:-translate-y-1 transition duration-400"
+                        href="#"><img src="images/icon-twitter.svg" alt=""></a>
+                        <a class="hover:scale-110 hover:-translate-y-1 transition duration-400"
+                        href="#"><img src="images/icon-pinterest.svg" alt=""></a>
+                        <a class="hover:scale-110 hover:-translate-y-1 transition duration-400"
+                        href="#"><img src="images/icon-instagram.svg" alt=""></a>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        
+        
+        <script src="js/script.js" async defer></script>
+    </body>
+</html>
